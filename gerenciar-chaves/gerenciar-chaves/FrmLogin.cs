@@ -17,12 +17,12 @@ namespace gerenciar_chaves
             InitializeComponent();
         }
 
-
+        //Botão confirmar
         private void BTN_confirmar_Click(object sender, EventArgs e)
         {
-            if (TXT_login.Text != "1734")
+            if (TXT_login.Text != "1734" || TXT_login.Text == "123")
             {
-                MessageBox.Show(this, "Login inválido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(this, "Login inválido!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 TXT_login.Focus();
                 return;
             }
@@ -35,6 +35,7 @@ namespace gerenciar_chaves
             }
         }
 
+        //Ao digitar senha
         private void TXT_login_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -43,6 +44,7 @@ namespace gerenciar_chaves
             }
         }
 
+        //Botão cancelar
         private void BTN_cancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
